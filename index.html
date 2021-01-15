@@ -81,11 +81,14 @@
           <div className="Game">
             <h1>Welcome to {props.venue}</h1>
             <div className="stats">
-              <Team name="Hotshots" logo="./assets/logo1.png" />
+              <Team
+                name={props.visitingTeam.name}
+                logo={props.visitingTeam.logoSrc}
+              />
               <div className="versus">
                 <h1>VS</h1>
               </div>
-              <Team name="Not The Hotshots" logo="./assets/logo2.png" />
+              <Team name={props.homeTeam.name} logo={props.homeTeam.logoSrc} />
             </div>
             ;
           </div>
@@ -93,10 +96,29 @@
       }
 
       function App(props) {
+        const team1 = {
+          name: "Hotshots",
+          logoSrc: "./assets/images/logo1.png",
+        };
+
+        const team2 = {
+          name: "Not The Hotshots",
+          logoSrc: "./assets/images/logo2.png",
+        };
+
+        const team3 = {
+          name: "We Are The Champions",
+          logoSrc: "./assets/images/logo3.png",
+        };
+        const team4 = {
+          name: "The A-Team",
+          logoSrc: "./assets/images/logo4.png",
+        };
+
         return (
           <div className="App">
-            <Game venue="Indianapolis" />
-            <Game venue="Jamestown" />
+            <Game venue="Indianapolis" homeTeam={team1} visitingTeam={team2} />
+            <Game venue="Jamestown" homeTeam={team4} visitingTeam={team3} />
           </div>
         );
       }
