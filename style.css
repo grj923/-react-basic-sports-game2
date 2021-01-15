@@ -10,7 +10,7 @@ body {
 
 .Game {
   text-align: center;
-  background-color: rgb(231, 176, 176);
+  background-color: rgb(190, 185, 185);
   border: 3px solid black;
 }
 .Team .scoreArea {
