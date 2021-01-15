@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="style.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>React Sports Game</title>
   </head>
   <body>
     <div id="root"></div>
@@ -64,14 +64,16 @@
               <div className="identity">
                 <img src={this.props.logo} alt={this.props.name} />
               </div>
-              <div>
-                <strong>Shots:</strong> {this.state.shots}
+              <div className="scoreArea">
+                <div>
+                  <strong>Shots:</strong> {this.state.shots}
+                </div>
+                <div>
+                  <strong>Score:</strong> {this.state.score}
+                </div>
+                {shotPercentageDiv}
+                <button onClick={this.shotHandler}>Shoot!</button>
               </div>
-              <div>
-                <strong>Score:</strong> {this.state.score}
-              </div>
-              {shotPercentageDiv}
-              <button onClick={this.shotHandler}>Shoot!</button>
             </div>
           );
         }

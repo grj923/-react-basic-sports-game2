@@ -8,39 +8,26 @@ body {
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
 }
 
-.ScoreBoard {
-  display: flex;
-  justify-content: center;
-  font-family: "Score Board", sans-serif;
-  text-align: center;
-  background: #2c2c2c;
-  color: #fd8049;
-  text-shadow: 0 0 3px #fd8049;
-  padding: 1rem 0;
-}
-
-.ScoreBoard h3 {
-  margin: 0;
-}
-
-.ScoreBoard .teamStats {
-  flex: 1;
-}
-
 .Game {
   text-align: center;
-  background-color: lightyellow;
+  background-color: rgb(231, 176, 176);
   border: 3px solid black;
+}
+.Team .scoreArea {
+  background: whitesmoke;
+  border: 2px solid black;
+  width: 200px;
+  padding-top: 5px;
 }
 
 .Team {
   display: flex;
-  background: gray;
+  background: lightgray;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
   height: 30rem;
-  border: 2px solid black;
+  border: 4px solid black;
 }
 
 .Team .identity {
@@ -80,8 +67,9 @@ button {
   margin-top: 1rem;
   width: 100%;
   padding: 0.5rem;
-  background-color: #fc0;
-  border: 0;
+  margin-bottom: 1em;
+  background-color: rgb(219, 200, 121);
+  border: 1px solid black;
   font-family: Oswald, sans-serif;
   text-transform: uppercase;
   font-size: 1.2em;
